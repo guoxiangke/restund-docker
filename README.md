@@ -11,7 +11,7 @@ git clone https://github.com/melonmanchan/restund-docker
 ```
 
 Then, edit the restund.custom.conf file with the IP address you're going to use, and other such things.
-After that, build and start the container.
+After that, build and start the container. Then, edit restund.env with the credentials of your choice
 
 ```sh
 cd restund-docker
