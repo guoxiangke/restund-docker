@@ -28,6 +28,10 @@ WORKDIR /restund
 RUN make
 RUN make install
 
+RUN cp /restund/restund.custom.conf /etc/restund.conf
+
+RUN chmod +x /restund/start-restund.sh
+
 EXPOSE 3478
 
 CMD ["bash", "/restund/start-restund.sh"]
