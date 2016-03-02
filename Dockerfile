@@ -1,9 +1,6 @@
 FROM ubuntu:14.04
 MAINTAINER Matti Jokitulppo <matti.jokitulppo@aalto.fi>
 
-ENV RESTUND_VERSION 0.4.12
-ENV RE_VERSION 0.4.15
-
 RUN apt-get update
 RUN apt-get upgrade -y
 
@@ -25,6 +22,8 @@ RUN make
 RUN make install
 
 WORKDIR /restund
+
+RUN patch -p1 < /restund/restund-auth.patch
 RUN make
 RUN make install
 
