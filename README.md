@@ -1,5 +1,5 @@
 # Restund Docker
-Dockerfile for running restund STUN/TURN server. Comes with STUN authorization patch from http://hancke.name
+Dockerfile for running restund STUN/TURN server.
 
 http://www.creytiv.com/restund.html
 
