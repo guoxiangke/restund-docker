@@ -22,7 +22,6 @@ RUN make
 RUN make install
 
 WORKDIR /restund
-
 RUN make
 RUN make install
 
