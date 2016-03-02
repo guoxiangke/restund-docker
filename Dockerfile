@@ -23,7 +23,7 @@ RUN make install
 
 WORKDIR /restund
 
-RUN patch -p1 < /restund/restund-auth.patch
+RUN /usr/bin/patch -p1 < /restund/restund-auth.patch
 RUN make
 RUN make install
 
