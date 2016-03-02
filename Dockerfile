@@ -4,7 +4,7 @@ MAINTAINER Matti Jokitulppo <matti.jokitulppo@aalto.fi>
 RUN apt-get update
 RUN apt-get upgrade -y
 
-RUN apt-get install g++ make curl -y
+RUN apt-get install g++ patch make curl -y
 
 RUN mkdir /re
 RUN mkdir /restund
@@ -23,7 +23,7 @@ RUN make install
 
 WORKDIR /restund
 
-RUN /usr/bin/patch -p1 < /restund/restund-auth.patch
+RUN patch -p1 < /restund/restund-auth.patch
 RUN make
 RUN make install
 
